@@ -1,0 +1,108 @@
+.MuiDataGrid-cell--textLeft {
+    border-right: 1px solid rgba(224, 224, 224, 1);
+}
+
+.RaAppBar-menuButton,
+.RaLoadingIndicator-loadedIcon {
+    display: none !important;
+}
+
+.MuiButtonBase-root {
+    text-transform: capitalize !important;
+}
+
+.MuiGrid2-root {
+    row-gap           : 45px;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition        : -webkit-transform 0.2s;
+    transition        : transform 0.2s;
+    transition        : transform 0.2s, -webkit-transform 0.2s;
+}
+
+@media screen and (max-width: 1110px) {
+    .item {
+        img {
+            width: 100% !important;
+        }
+    }
+}
+
+.toolbar {
+    form {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+        gap            : 15px;
+        margin         : 15px;
+    }
+}
+
+.item {
+    border: 2px solid black;
+}
+
+.item,
+.item-selected {
+    overflow: hidden;
+    cursor        : pointer;
+    position      : relative;
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    padding       : 15px;
+    border-radius : 15px;
+
+    img {
+        border-radius: 8px;
+        width        : 450px;
+        max-width    : 100%;
+        height       : auto;
+        object-fit   : cover;
+        border-radius: 8px;
+    }
+
+    .size,
+    .private {
+        position     : absolute;
+        padding      : 5px 15px;
+        border-radius: 10px;
+    }
+
+    .size {
+        background-color: white;
+        right           : 15px;
+        font-weight     : bolder;
+        color           : black;
+    }
+
+    .private {
+        background-color: black;
+        width           : fit-content;
+        color           : orange;
+        bottom          : 0;
+        left            : 15px;
+        display         : flex;
+        align-items     : center;
+        gap             : 15px;
+    }
+
+    &:hover {
+        .MuiButtonBase-root:not(.selected) {
+            background-color: orange;
+        }
+    }
+}
+
+
+.item-selected {
+    border: 2px solid green;
+}
+
+.RaAppBar-title {
+    visibility: hidden;
+}
+
+.MuiContainer-root {
+    max-width: 1600px !important;
+}
